@@ -1,9 +1,5 @@
 import { Router } from "express";
-import {
-  createUser,
-  login,
-  logout,
-} from "../../modules/users/users.contoller.js";
+import { createUser } from "../../modules/users/users.contoller.js";
 
 export const router = Router();
 

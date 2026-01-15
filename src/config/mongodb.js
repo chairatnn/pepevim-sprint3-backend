@@ -2,12 +2,11 @@ import mongoose from "mongoose";
 import { env } from "../utils/env.js";
 
 export const connectDB = async () => {
-  const uri = env.MONGO_URI;
+  const URI = env.MONGO_URI;
+  const DB_NAME = env.DB_NAME;
 
   try {
-    await mongoose.connect(uri, { dbName: "pepeDB" });
-    console.log("DB name :", mongoose.connection.name);
-    console.log("DB HOST:", mongoose.connection.host);
+    await mongoose.connect(URI, { dbName: DB_NAME });
     console.log("MongoDB connected ✅ 🎉");
   } catch (error) {
     console.error("MongoDB connection error ❌", error);

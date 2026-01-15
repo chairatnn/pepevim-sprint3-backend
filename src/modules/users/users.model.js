@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-console.log("🚀 ~ User model loaded | DB:", mongoose.connection.name);
-
 const UserSchema = new mongoose.Schema(
   {
     first_name: {
@@ -36,10 +34,7 @@ const UserSchema = new mongoose.Schema(
       select: false,
     },
 
-    //  add เพิ่ม 🎀🍄
-
     role: { type: String, enum: ["user", "admin"], default: "user" },
-    updatedAt: { type: Date, default: null },
   },
   { timestamps: true }
 );
