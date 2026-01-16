@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { router as apiRoutes } from "./routes/index.js";
+import connectDB from "./db/index.js";
+
+connectDB();
 
 import { env } from "./utils/env.js";
 
