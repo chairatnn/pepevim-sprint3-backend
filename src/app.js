@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { router as apiRoutes } from "./routes/index.js";
 
-// import { env } from "./utils/env.js";
+import { env } from "./utils/env.js";
 
 export const app = express();
 
@@ -12,7 +12,7 @@ const corsOptions = {
     "http://localhost:5173",
     "http://localhost:5174",
     "http://localhost:5175",
-    process.env.CLIENT_URL,
+    env.CLIENT_URL,
   ],
   credentials: true,
 };
