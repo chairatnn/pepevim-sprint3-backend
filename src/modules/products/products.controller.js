@@ -14,8 +14,6 @@ export const getProducts = async (req, res) => {
   }
 };
 
-export const getProduct = async (req, res) => {};
-
 export const getProductDetail = async (req, res) => {
   const { id } = req.params;
   try {
@@ -34,7 +32,6 @@ export const createProduct = async (req, res) => {
   try {
     const { productName, productDesc, price, category, sizes } = req.body;
 
-    // 1. validate ข้อมูลหลัก
     if (!productName || !productDesc || !price) {
       return res.status(400).json({
         message: "productName, productDesc, price, category are required",
@@ -83,3 +80,11 @@ export const createProduct = async (req, res) => {
     });
   }
 };
+
+export const editProduct = async (params) => {
+  
+}
+
+export const deleteProduct = async (params) => {
+  
+}

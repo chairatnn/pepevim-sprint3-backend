@@ -1,5 +1,5 @@
 import * as mockup from "../../mock-db/dashboard.js"; 
-import { Dashboard } from "../models/dashboard.model.js";
+import { Dashboard } from "./dashboard.model.js";
 
 export const getDashboard = async (req, res) => {
   try {
