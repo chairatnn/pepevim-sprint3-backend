@@ -1,4 +1,4 @@
-import { Order } from "../models/order.model.js"; // ตรวจสอบ path ให้ถูกต้อง
+import { Order } from "../order/order.model.js"; // ตรวจสอบ path ให้ถูกต้อง
 import mongoose from "mongoose";
 
 /**

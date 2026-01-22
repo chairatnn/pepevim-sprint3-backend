@@ -62,3 +62,17 @@ export const createOrder = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+
+
+export const getOrder = async (req, res) => {
+  try {
+    const order = await Order.find();
+    return res.status(200).json({
+      success: true,
+      data: order,
+    });
+  } catch (error) {
+    error.name = error.name || "DatabaseError";
+    error.status = 500;
+  }
+};
